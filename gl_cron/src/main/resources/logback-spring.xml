@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>
+    <include resource="org/springframework/boot/logging/logback/base.xml"/>
+
+    <springProfile name="development">
+        <logger name="com.grandland.qdhx.cron" level="DEBUG"/>
+        <logger name="com.grandland.qdhx.core" level="DEBUG"/>
+        <logger name="com.grandland.qdhx.client" level="DEBUG"/>
+    </springProfile>
+    <springProfile name="production">
+        <logger name="com.grandland.qdhx.cron" level="INFO"/>
+        <logger name="com.grandland.qdhx.core" level="INFO"/>
+        <logger name="com.grandland.qdhx.client" level="INFO"/>
+    </springProfile>
+</configuration>

@@ -1,0 +1,49 @@
+apply plugin: 'war'
+apply plugin: 'spring-boot'
+
+dependencies{
+
+    compile (
+            "org.springframework.boot:spring-boot-starter-web:${springBootVersion}",
+            "org.springframework.boot:spring-boot-starter-test:${springBootVersion}",
+            "org.springframework.boot:spring-boot-starter-security:${springBootVersion}",
+            "org.springframework.boot:spring-boot-starter-aop:${springBootVersion}",
+//            'org.springframework.security:spring-security-taglibs:3.2.5.RELEASE',
+            'javax.servlet:jstl:1.2',
+            'org.mybatis.spring.boot:mybatis-spring-boot-starter:1.1.1',
+            "mysql:mysql-connector-java:5.1.39",
+            'com.alibaba:druid:1.0.31',
+            'com.mchange:mchange-commons-java:0.2.10',
+            'com.github.pagehelper:pagehelper:4.2.1',
+            'javax.inject:javax.inject:1',
+            
+            //swagger2 集成
+            'io.springfox:springfox-swagger2:2.2.2',
+            'io.springfox:springfox-swagger-ui:2.2.2',
+            
+            // 集成shiro
+ //           'org.apache.shiro:shiro-spring:1.4.0',
+
+            //CXF
+            "org.apache.cxf:cxf-spring-boot-starter-jaxws:3.1.7",
+           
+            //thymeleaf
+//            "org.springframework.boot:spring-boot-starter-thymeleaf",
+//            "net.sourceforge.nekohtml:nekohtml",
+            
+            
+    )
+    
+    //引用core
+    compile project(":gl_core")
+
+    providedRuntime (
+            "org.springframework.boot:spring-boot-starter-tomcat:${springBootVersion}",
+            'org.apache.tomcat.embed:tomcat-embed-jasper:8.0.36'
+//            'javax.servlet:javax.servlet-api'
+    )
+}
+
+springBoot {
+    mainClass="com.grandland.qdhx.web.WebApplication"
+}

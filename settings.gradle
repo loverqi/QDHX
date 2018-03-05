@@ -1,0 +1,8 @@
+rootProject.name = 'QDHX'
+include 'gl_web'
+include 'gl_core'
+include 'gl_spider'
+include 'gl_webservice'
+include 'gl_cron'
+include 'gl_client'
+

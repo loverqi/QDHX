@@ -1,0 +1,25 @@
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
+classes
+# Created by .ignore support plugin (hsz.mobi)
+
+*/build/
+*/.gradle/
+.gradle
+*.out
+*.log
+*.swap
+
+.project
+.settings/
+
+
+# spring boot properties file
+*-development.yaml
+*-development.properties

@@ -1,0 +1,9 @@
+apply plugin: 'java'
+
+
+dependencies {
+    compile (
+            //CXF
+            "org.apache.cxf:cxf-spring-boot-starter-jaxws:3.1.7",
+    )
+}

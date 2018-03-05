@@ -1,0 +1,20 @@
+apply plugin: 'java'
+apply plugin: 'spring-boot'
+
+dependencies{
+
+    compile (
+            'org.mybatis.spring.boot:mybatis-spring-boot-starter:1.1.1',
+            "mysql:mysql-connector-java:5.1.39",
+            'us.codecraft:webmagic-core:0.7.3',
+            'us.codecraft:webmagic-extension:0.7.3',
+    )
+    
+    //引用core
+    compile project(":gl_core")
+}
+
+springBoot {
+    mainClass="com.grandland.qdhx.spider.SpiderApplication"
+}
+

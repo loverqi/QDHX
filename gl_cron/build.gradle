@@ -1,0 +1,16 @@
+apply plugin: 'java'
+apply plugin: 'spring-boot'
+
+
+dependencies {
+    compile (
+            //Quartz
+            "org.quartz-scheduler:quartz:${quartzVersion}",
+            "org.springframework:spring-context-support:${springVersion}"
+    )
+
+    //引用core
+    compile project(":gl_core")
+    //引用client
+    compile project(":gl_client")
+}

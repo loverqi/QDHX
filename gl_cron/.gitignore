@@ -1,0 +1,9 @@
+/bin/
+
+build/
+
+.settings/
+.project
+.classpath
+.project
+.settings/org.eclipse.buildship.core.prefs
